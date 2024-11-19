@@ -6,23 +6,23 @@ local Window = ArrayField:CreateWindow({
    LoadingSubtitle = "by MCompetitive",
    ConfigurationSaving = {
       Enabled = true,
-      FolderName = nil, -- Create a custom folder for your hub/game
+      FolderName = nil,
       FileName = "Big Hub"
    },
    Discord = {
       Enabled = true,
-      Invite = "e3KPkzqcvt", -- The Discord invite code without discord.gg/
-      RememberJoins = true -- True to remember the user's join
+      Invite = "e3KPkzqcvt",
+      RememberJoins = true
    },
    KeySystem = true, -- Set this to true to use the key system
    KeySettings = {
       Title = "Greenville Tweak Hub",
       Subtitle = "Key System",
       Note = "No method of obtaining the key is provided",
-      FileName = "Key", -- The key file will be saved here
-      SaveKey = false, -- Whether to save the key for the user
-      GrabKeyFromSite = true, -- Fetch the key from a URL
-      Key = {"dev"} -- List of acceptable keys
+      FileName = "Key",
+      SaveKey = false,
+      GrabKeyFromSite = true,
+      Key = {"dev"}
    }
 })
 
@@ -32,7 +32,6 @@ local VehicleTab = Window:CreateTab("Vehicle", 4483362458)
 local accountName = "MCompetitive"
 local isArabWheelerActive = false
 
--- Input for Account Name
 local TextInput = PlayerTab:CreateInput({
     Name = "Account Name",
     PlaceholderText = accountName,
@@ -42,7 +41,6 @@ local TextInput = PlayerTab:CreateInput({
     end,
 })
 
--- Toggle for Arab Wheeler
 local ToggleButton = PlayerTab:CreateToggle({
     Name = "Arab Wheeler",
     CurrentValue = false,
